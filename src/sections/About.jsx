@@ -18,14 +18,13 @@ export default function About() {
         </div>
       </div>
 
-      {/* Faint grid */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
         backgroundImage: "linear-gradient(rgba(237,232,220,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,232,220,0.03) 1px,transparent 1px)",
         backgroundSize: "40px 40px",
       }} />
 
-      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4rem",alignItems:"center",marginTop:"2rem",position:"relative",zIndex:1}}>
+      <div className="about-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4rem",alignItems:"center",marginTop:"2rem",position:"relative",zIndex:1}}>
 
         <motion.div
           initial={{opacity:0,rotate:-5,y:40}}
@@ -50,7 +49,7 @@ export default function About() {
             ▶ level 01
           </p>
 
-          <h2 style={{fontFamily:"monospace",fontSize:"clamp(2.5rem, 5vw, 4rem)",fontWeight:"bold",color:"#EDE8DC",lineHeight:1.1,marginBottom:"1.5rem"}}>
+          <h2 style={{fontFamily:"monospace",fontSize:"clamp(2rem, 5vw, 4rem)",fontWeight:"bold",color:"#EDE8DC",lineHeight:1.1,marginBottom:"1.5rem"}}>
             meet the<br />
             <span style={{color:"#6B1E1E"}}>developer.</span>
           </h2>
@@ -73,7 +72,7 @@ export default function About() {
             ))}
           </div>
 
-          <div style={{display:"flex",gap:"2rem",marginBottom:"2rem"}}>
+          <div style={{display:"flex",gap:"2rem",marginBottom:"2rem",flexWrap:"wrap"}}>
             {[
               {label:"university",value:"LNCT"},
               {label:"year",value:"3rd"},
@@ -87,7 +86,7 @@ export default function About() {
             ))}
           </div>
 
-          <div style={{display:"flex",gap:"1rem"}}>
+          <div style={{display:"flex",gap:"1rem",flexWrap:"wrap"}}>
             <a href="https://github.com/Charuu-jain" target="_blank" rel="noreferrer" style={{fontFamily:"monospace",fontSize:"12px",color:"#EDE8DC",padding:"8px 20px",border:"1px solid #6B1E1E",textDecoration:"none",letterSpacing:"0.15em"}}>
               github
             </a>

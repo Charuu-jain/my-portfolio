@@ -5,10 +5,10 @@ const FILM_WORDS = ["developer", "builder", "problem solver", "DSA nerd", "creat
 
 const STICKERS = [
   { src: "/stickers/star.png",        top: "10%", left: "5%",   size: 130, rot: -15 },
-  { src: "/stickers/camera.png",      top: "8%",  right: "6%",  size: 180, rot: 12  },
+  { src: "/stickers/camera.png",      top: "8%",  right: "6%",  size: 140, rot: 12  },
   { src: "/stickers/laptop.png",      top: "55%", left: "2%",   size: 125, rot: -8  },
-  { src: "/stickers/microphone.png",  top: "58%", right: "3%",  size: 200, rot: 10  },
-  { src: "/stickers/exclamation.png", top: "22%", left: "14%",  size: 150,  rot: 5   },
+  { src: "/stickers/microphone.png",  top: "58%", right: "3%",  size: 120, rot: 10  },
+  { src: "/stickers/exclamation.png", top: "22%", left: "14%",  size: 85,  rot: 5   },
   { src: "/stickers/plaid.png",       top: "70%", left: "20%",  size: 110, rot: -12 },
 ]
 
@@ -24,6 +24,7 @@ function MusicPlayer() {
 
   return (
     <motion.div
+      className="music-player"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.2 }}
@@ -113,6 +114,7 @@ export default function Hero() {
       {STICKERS.map((s, i) => (
         <motion.img
           key={i}
+          className="sticker"
           src={s.src}
           alt=""
           initial={{ opacity: 0, scale: 0.4 }}
@@ -160,7 +162,7 @@ export default function Hero() {
           <h1
             className="glitch"
             data-text="CHARU"
-            style={{ fontFamily:"monospace", fontWeight:"bold", fontSize:"clamp(5rem,16vw,11rem)", lineHeight:1, color:"#2C1810", margin:0 }}
+            style={{ fontFamily:"monospace", fontWeight:"bold", fontSize:"clamp(4rem,16vw,11rem)", lineHeight:1, color:"#2C1810", margin:0 }}
           >
             CHARU
           </h1>
@@ -171,7 +173,7 @@ export default function Hero() {
           animate={{ opacity:1, y:0 }}
           transition={{ duration:0.9, delay:0.35 }}
         >
-          <h2 style={{ fontFamily:"monospace", fontWeight:"bold", fontSize:"clamp(3rem,10vw,7rem)", lineHeight:1, color:"#6B1E1E", marginBottom:"1.5rem" }}>
+          <h2 style={{ fontFamily:"monospace", fontWeight:"bold", fontSize:"clamp(2.5rem,10vw,7rem)", lineHeight:1, color:"#6B1E1E", marginBottom:"1.5rem" }}>
             JAIN
           </h2>
         </motion.div>
@@ -180,7 +182,7 @@ export default function Hero() {
           initial={{ opacity:0 }}
           animate={{ opacity:1 }}
           transition={{ delay:0.8 }}
-          style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", fontFamily:"monospace", fontSize:"1.1rem", color:"#2C1810" }}
+          style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", fontFamily:"monospace", fontSize:"clamp(0.9rem,3vw,1.1rem)", color:"#2C1810" }}
         >
           <span style={{ color:"#6B1E1E" }}>{">"}</span>
           <span ref={typingRef}></span>

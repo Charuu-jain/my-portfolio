@@ -75,7 +75,7 @@ export default function Skills() {
         </div>
       </div>
 
-      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4rem", alignItems:"start", marginTop:"2rem", position:"relative", zIndex:1 }}>
+      <div className="skills-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4rem", alignItems:"start", marginTop:"2rem", position:"relative", zIndex:1 }}>
 
         <div>
           <motion.p
@@ -133,7 +133,7 @@ export default function Skills() {
           </div>
         </div>
 
-        <div style={{ paddingTop:"5rem" }}>
+        <div className="skills-bars" style={{ paddingTop:"5rem" }}>
           {SKILLS.map((skill, i) => (
             <motion.div
               key={i}
@@ -143,11 +143,11 @@ export default function Skills() {
               viewport={{ once:true }}
               style={{ marginBottom:"1.8rem" }}
             >
-              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:"6px" }}>
+              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:"6px" }}>
                 <div style={{ display:"flex", alignItems:"center", gap:"8px" }}>
                   <i className={skill.devicon} style={{ fontSize:"20px" }} />
                   <span style={{ fontFamily:"monospace", fontSize:"14px", fontWeight:"bold", color:"#2C1810" }}>{skill.name}</span>
-                  <span style={{ fontFamily:"monospace", fontSize:"10px", color:"#6B1E1E", letterSpacing:"0.1em" }}>// {skill.tag}</span>
+                  <span className="skill-tag" style={{ fontFamily:"monospace", fontSize:"10px", color:"#6B1E1E", letterSpacing:"0.1em" }}>// {skill.tag}</span>
                 </div>
                 <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#6B1E1E" }}>{skill.level}%</span>
               </div>
