@@ -8,7 +8,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div style={{ overflowX: "hidden", overflowY: "auto", WebkitOverflowScrolling: "touch" }}>
       <Cursor />
       <Navbar />
       <Hero />

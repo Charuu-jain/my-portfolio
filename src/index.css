@@ -8,11 +8,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #F5F0E8;
   color: #1a1a1a;
   font-family: 'Courier New', monospace;
   cursor: none;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes marquee {
