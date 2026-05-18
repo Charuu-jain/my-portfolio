@@ -32,7 +32,7 @@ export default function Navbar() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0 3rem",
+        padding: "0 1rem",
         height: "52px",
         backgroundColor: scrolled ? "rgba(237,232,220,0.5)" : "transparent",
         backdropFilter: scrolled ? "blur(6px)" : "none",
@@ -40,7 +40,7 @@ export default function Navbar() {
         transition: "all 0.4s ease",
       }}
     >
-      <div style={{ display: "flex", gap: "3rem" }}>
+      <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap", justifyContent: "center" }}>
         {links.map((link, i) => (
           <span
             key={i}
@@ -50,7 +50,7 @@ export default function Navbar() {
               fontSize: "11px",
               color: scrolled ? "#2C1810" : "transparent",
               cursor: "pointer",
-              letterSpacing: "0.25em",
+              letterSpacing: "0.2em",
               textTransform: "uppercase",
               transition: "color 0.4s",
               pointerEvents: scrolled ? "auto" : "none",

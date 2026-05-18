@@ -1,10 +1,17 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Cursor() {
   const cursorRef = useRef(null)
   const trailRef = useRef(null)
+  const [isTouch, setIsTouch] = useState(false)
 
   useEffect(() => {
+    // Hide cursor on touch devices
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setIsTouch(true)
+      return
+    }
+
     const move = (e) => {
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`
@@ -20,6 +27,8 @@ export default function Cursor() {
     window.addEventListener("mousemove", move)
     return () => window.removeEventListener("mousemove", move)
   }, [])
+
+  if (isTouch) return null
 
   return (
     <>

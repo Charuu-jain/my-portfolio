@@ -71,7 +71,7 @@ export default function Contact() {
 
         <div style={{ display:"flex", flexDirection:"column", gap:"1px" }}>
           {[
-            { label: "email", value: "your@gmail.com", href: "mailto:your@gmail.com?subject=Hey Charu!&body=Hi Charu, I wanted to reach out..." },
+            { label: "email", value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com?subject=Hey Charu!&body=Hi Charu, I wanted to reach out..." },
             { label: "github", value: "github.com/Charuu-jain", href: "https://github.com/Charuu-jain" },
             { label: "linkedin", value: "linkedin.com/in/charu-jain", href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
           ].map((item, i) => (
