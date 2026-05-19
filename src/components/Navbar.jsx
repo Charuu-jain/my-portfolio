@@ -72,7 +72,6 @@ export default function Navbar() {
             {link}
           </span>
         ))}
-
         
           href="/resume.pdf"
           download="Charu_Jain_Resume.pdf"
@@ -88,7 +87,7 @@ export default function Navbar() {
             transition: "all 0.4s",
             pointerEvents: scrolled ? "auto" : "none",
           }}
-        
+        >
           resume
         </a>
       </div>

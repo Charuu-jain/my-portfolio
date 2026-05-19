@@ -11,7 +11,7 @@ export default function Contact() {
 
   function handleSubmit() {
     if (!form.name || !form.email || !form.message) return
-    const subject = encodeURIComponent("Hey Charu! — from " + form.name)
+    const subject = encodeURIComponent("Hey Charu! from " + form.name)
     const body = encodeURIComponent("Name: " + form.name + "\nEmail: " + form.email + "\n\nMessage:\n" + form.message)
     window.open("mailto:charujain290605@gmail.com?subject=" + subject + "&body=" + body)
     setSent(true)
@@ -31,6 +31,12 @@ export default function Contact() {
     boxSizing: "border-box",
   }
 
+  const contactLinks = [
+    { label: "email", value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com" },
+    { label: "github", value: "github.com/Charuu-jain", href: "https://github.com/Charuu-jain" },
+    { label: "linkedin", value: "linkedin.com/in/charu-jain", href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
+  ]
+
   return (
     <section id="contact" style={{
       minHeight: "100vh",
@@ -45,7 +51,7 @@ export default function Contact() {
 
       <div style={{ position:"absolute", top:0, left:0, right:0, height:"36px", backgroundColor:"#6B1E1E", display:"flex", alignItems:"center", overflow:"hidden" }}>
         <div className="animate-marquee" style={{ display:"flex", gap:"12px", whiteSpace:"nowrap" }}>
-          {Array(20).fill("LET'S TALK  GET IN TOUCH  HIRE ME").map((t, i) => (
+          {Array(20).fill("LETS TALK  GET IN TOUCH  HIRE ME").map((t, i) => (
             <span key={i} style={{ color:"#EDE8DC", fontSize:"11px", fontFamily:"monospace", letterSpacing:"0.2em" }}>{t}</span>
           ))}
         </div>
@@ -75,7 +81,7 @@ export default function Contact() {
           viewport={{ once:true }}
           style={{ fontFamily:"monospace", fontSize:"clamp(2.5rem,8vw,6rem)", fontWeight:"bold", color:"#EDE8DC", lineHeight:1, marginBottom:"0.5rem" }}
         >
-          let's
+          lets
         </motion.h2>
 
         <motion.h2
@@ -99,15 +105,11 @@ export default function Contact() {
               style={{ fontFamily:"monospace", fontSize:"15px", color:"#D4C5A9", lineHeight:1.8, marginBottom:"2rem" }}
             >
               open to internships, collabs, or just a good conversation.
-              drop a message and i'll get back to you.
+              drop a message and i will get back to you.
             </motion.p>
 
             <div style={{ display:"flex", flexDirection:"column", gap:"1px", marginBottom:"2rem" }}>
-              {[
-                { label: "email", value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com" },
-                { label: "github", value: "github.com/Charuu-jain", href: "https://github.com/Charuu-jain" },
-                { label: "linkedin", value: "linkedin.com/in/charu-jain", href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
-              ].map((item, i) => (
+              {contactLinks.map((item, i) => (
                 <motion.a
                   key={i}
                   href={item.href}
@@ -133,7 +135,7 @@ export default function Contact() {
                     <span style={{ fontFamily:"monospace", fontSize:"10px", color:"#6B1E1E", letterSpacing:"0.25em", textTransform:"uppercase", minWidth:"60px" }}>{item.label}</span>
                     <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#EDE8DC", letterSpacing:"0.05em" }}>{item.value}</span>
                   </div>
-                  <span style={{ color:"#6B1E1E" }}>↗</span>
+                  <span style={{ color:"#6B1E1E", fontSize:"16px" }}>{"↗"}</span>
                 </motion.a>
               ))}
               <div style={{ borderTop:"1px solid rgba(107,30,30,0.3)" }} />
