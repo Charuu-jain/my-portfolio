@@ -32,8 +32,8 @@ export default function Contact() {
   }
 
   const contactLinks = [
-    { label: "email",    value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com" },
-    { label: "github",   value: "github.com/Charuu-jain",   href: "https://github.com/Charuu-jain" },
+    { label: "email",    value: "charujain290605@gmail.com",  href: "mailto:charujain290605@gmail.com" },
+    { label: "github",   value: "github.com/Charuu-jain",     href: "https://github.com/Charuu-jain" },
     { label: "linkedin", value: "linkedin.com/in/charu-jain", href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
   ]
 
@@ -41,7 +41,7 @@ export default function Contact() {
     <section id="contact" style={{
       minHeight: "100vh",
       backgroundColor: "#1a0a0a",
-      padding: "6rem 5rem",
+      padding: "6rem clamp(1.2rem, 5vw, 5rem)",
       position: "relative",
       overflow: "hidden",
       display: "flex",
@@ -94,14 +94,20 @@ export default function Contact() {
           talk.
         </motion.h2>
 
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4rem", alignItems:"start" }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "3rem",
+          alignItems: "start",
+        }}>
+
           <div>
             <motion.p
               initial={{ opacity:0 }}
               whileInView={{ opacity:1 }}
               transition={{ delay:0.3 }}
               viewport={{ once:true }}
-              style={{ fontFamily:"monospace", fontSize:"15px", color:"#D4C5A9", lineHeight:1.8, marginBottom:"2rem" }}
+              style={{ fontFamily:"monospace", fontSize:"clamp(13px,2vw,15px)", color:"#D4C5A9", lineHeight:1.8, marginBottom:"2rem" }}
             >
               open to internships, collabs, or just a good conversation.
               drop a message and i will get back to you.
@@ -122,17 +128,19 @@ export default function Contact() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    padding: "16px 8px",
+                    padding: "14px 8px",
                     borderTop: "1px solid rgba(107,30,30,0.3)",
                     textDecoration: "none",
                     transition: "background 0.2s",
+                    flexWrap: "wrap",
+                    gap: "8px",
                   }}
                   onMouseEnter={e => { e.currentTarget.style.backgroundColor = "rgba(107,30,30,0.15)" }}
                   onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent" }}
                 >
-                  <div style={{ display:"flex", alignItems:"center", gap:"1rem" }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:"1rem", flexWrap:"wrap" }}>
                     <span style={{ fontFamily:"monospace", fontSize:"10px", color:"#6B1E1E", letterSpacing:"0.25em", textTransform:"uppercase", minWidth:"60px" }}>{item.label}</span>
-                    <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#EDE8DC" }}>{item.value}</span>
+                    <span style={{ fontFamily:"monospace", fontSize:"clamp(10px,1.5vw,12px)", color:"#EDE8DC", wordBreak:"break-all" }}>{item.value}</span>
                   </div>
                   <span style={{ color:"#6B1E1E", fontSize:"14px" }}>{"↗"}</span>
                 </motion.a>
@@ -140,22 +148,7 @@ export default function Contact() {
               <div style={{ borderTop:"1px solid rgba(107,30,30,0.3)" }} />
             </div>
 
-            <a
-              href="/resume.pdf"
-              download="Charu_Jain_Resume.pdf"
-              style={{
-                display: "inline-block",
-                fontFamily: "monospace",
-                fontSize: "12px",
-                color: "#EDE8DC",
-                backgroundColor: "#6B1E1E",
-                padding: "12px 28px",
-                textDecoration: "none",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-              }}>
-              download resume
-            </a>
+            <a href="/resume.pdf" download="Charu_Jain_Resume.pdf" style={{ display:"inline-block", fontFamily:"monospace", fontSize:"12px", color:"#EDE8DC", backgroundColor:"#6B1E1E", padding:"12px 28px", textDecoration:"none", letterSpacing:"0.2em", textTransform:"uppercase" }}>download resume</a>
           </div>
 
           <motion.div
@@ -187,6 +180,7 @@ export default function Contact() {
               {sent ? "message sent" : "send message"}
             </button>
           </motion.div>
+
         </div>
 
         <motion.p
@@ -198,6 +192,7 @@ export default function Contact() {
         >
           2025 charu jain — built with react + vite + too much espresso
         </motion.p>
+
       </div>
     </section>
   )
