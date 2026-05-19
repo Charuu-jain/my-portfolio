@@ -32,9 +32,9 @@ export default function Contact() {
   }
 
   const contactLinks = [
-    { label: "email",    value: "charujain290605@gmail.com",           href: "mailto:charujain290605@gmail.com" },
-    { label: "github",   value: "github.com/Charuu-jain",              href: "https://github.com/Charuu-jain" },
-    { label: "linkedin", value: "linkedin.com/in/charu-jain",          href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
+    { label: "email",    value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com" },
+    { label: "github",   value: "github.com/Charuu-jain",   href: "https://github.com/Charuu-jain" },
+    { label: "linkedin", value: "linkedin.com/in/charu-jain", href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
   ]
 
   return (
@@ -95,7 +95,6 @@ export default function Contact() {
         </motion.h2>
 
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4rem", alignItems:"start" }}>
-
           <div>
             <motion.p
               initial={{ opacity:0 }}
@@ -167,28 +166,9 @@ export default function Contact() {
             viewport={{ once:true }}
             style={{ display:"flex", flexDirection:"column", gap:"16px" }}
           >
-            <input
-              name="name"
-              placeholder="your name"
-              value={form.name}
-              onChange={handleChange}
-              style={inputStyle}
-            />
-            <input
-              name="email"
-              placeholder="your email"
-              value={form.email}
-              onChange={handleChange}
-              style={inputStyle}
-            />
-            <textarea
-              name="message"
-              placeholder="your message"
-              value={form.message}
-              onChange={handleChange}
-              rows={5}
-              style={{ ...inputStyle, resize:"vertical" }}
-            />
+            <input name="name" placeholder="your name" value={form.name} onChange={handleChange} style={inputStyle} />
+            <input name="email" placeholder="your email" value={form.email} onChange={handleChange} style={inputStyle} />
+            <textarea name="message" placeholder="your message" value={form.message} onChange={handleChange} rows={5} style={{ ...inputStyle, resize:"vertical" }} />
             <button
               onClick={handleSubmit}
               style={{
@@ -208,7 +188,6 @@ export default function Contact() {
               {sent ? "message sent" : "send message"}
             </button>
           </motion.div>
-
         </div>
 
         <motion.p
@@ -220,7 +199,6 @@ export default function Contact() {
         >
           2025 charu jain — built with react + vite + too much espresso
         </motion.p>
-
       </div>
     </section>
   )

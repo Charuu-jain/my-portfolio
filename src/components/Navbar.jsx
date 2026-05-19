@@ -20,6 +20,16 @@ export default function Navbar() {
     }
   }
 
+  const resumeStyle = {
+    fontFamily: "monospace",
+    fontSize: "11px",
+    padding: "5px 14px",
+    textDecoration: "none",
+    letterSpacing: "0.15em",
+    textTransform: "uppercase",
+    transition: "all 0.4s",
+  }
+
   return (
     <motion.nav
       initial={{ y: -60, opacity: 0 }}
@@ -72,24 +82,19 @@ export default function Navbar() {
             {link}
           </span>
         ))}
-        
-          href="/resume.pdf"
-          download="Charu_Jain_Resume.pdf"
-          style={{
-            fontFamily: "monospace",
-            fontSize: "11px",
-            color: scrolled ? "#EDE8DC" : "transparent",
-            backgroundColor: scrolled ? "#6B1E1E" : "transparent",
-            padding: "5px 14px",
-            textDecoration: "none",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            transition: "all 0.4s",
-            pointerEvents: scrolled ? "auto" : "none",
-          }}
-        >
-          resume
-        </a>
+        {scrolled && (
+          
+            href="/resume.pdf"
+            download="Charu_Jain_Resume.pdf"
+            style={{
+              ...resumeStyle,
+              color: "#EDE8DC",
+              backgroundColor: "#6B1E1E",
+            }}
+          >
+            resume
+          </a>
+        )}
       </div>
     </motion.nav>
   )
