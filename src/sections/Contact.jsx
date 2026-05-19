@@ -32,9 +32,9 @@ export default function Contact() {
   }
 
   const contactLinks = [
-    { label: "email", value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com" },
-    { label: "github", value: "github.com/Charuu-jain", href: "https://github.com/Charuu-jain" },
-    { label: "linkedin", value: "linkedin.com/in/charu-jain", href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
+    { label: "email",    value: "charujain290605@gmail.com",           href: "mailto:charujain290605@gmail.com" },
+    { label: "github",   value: "github.com/Charuu-jain",              href: "https://github.com/Charuu-jain" },
+    { label: "linkedin", value: "linkedin.com/in/charu-jain",          href: "https://www.linkedin.com/in/charu-jain-10b36b277/" },
   ]
 
   return (
@@ -133,9 +133,9 @@ export default function Contact() {
                 >
                   <div style={{ display:"flex", alignItems:"center", gap:"1rem" }}>
                     <span style={{ fontFamily:"monospace", fontSize:"10px", color:"#6B1E1E", letterSpacing:"0.25em", textTransform:"uppercase", minWidth:"60px" }}>{item.label}</span>
-                    <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#EDE8DC", letterSpacing:"0.05em" }}>{item.value}</span>
+                    <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#EDE8DC" }}>{item.value}</span>
                   </div>
-                  <span style={{ color:"#6B1E1E", fontSize:"16px" }}>{"↗"}</span>
+                  <span style={{ color:"#6B1E1E", fontSize:"14px" }}>{"↗"}</span>
                 </motion.a>
               ))}
               <div style={{ borderTop:"1px solid rgba(107,30,30,0.3)" }} />
