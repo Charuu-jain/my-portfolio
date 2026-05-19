@@ -20,16 +20,6 @@ export default function Navbar() {
     }
   }
 
-  const resumeStyle = {
-    fontFamily: "monospace",
-    fontSize: "11px",
-    padding: "5px 14px",
-    textDecoration: "none",
-    letterSpacing: "0.15em",
-    textTransform: "uppercase",
-    transition: "all 0.4s",
-  }
-
   return (
     <motion.nav
       initial={{ y: -60, opacity: 0 }}
@@ -40,28 +30,18 @@ export default function Navbar() {
         top: 0, left: 0, right: 0,
         zIndex: 100,
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
         padding: "0 2rem",
         height: "52px",
-        backgroundColor: scrolled ? "rgba(237,232,220,0.85)" : "transparent",
-        backdropFilter: scrolled ? "blur(6px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(107,30,30,0.15)" : "none",
+        backgroundColor: scrolled ? "rgba(237,232,220,0.15)" : "transparent",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(107,30,30,0.12)" : "none",
         transition: "all 0.4s ease",
       }}
     >
-      <span style={{
-        fontFamily: "monospace",
-        fontSize: "12px",
-        color: scrolled ? "#6B1E1E" : "transparent",
-        letterSpacing: "0.2em",
-        fontWeight: "bold",
-        transition: "color 0.4s",
-      }}>
-        cj.
-      </span>
-
-      <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+      <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
         {links.map((link, i) => (
           <span
             key={i}
@@ -83,15 +63,19 @@ export default function Navbar() {
           </span>
         ))}
         {scrolled && (
-          <a
+            <a
             href="/resume.pdf"
             download="Charu_Jain_Resume.pdf"
             style={{
-              ...resumeStyle,
+              fontFamily: "monospace",
+              fontSize: "11px",
               color: "#EDE8DC",
               backgroundColor: "#6B1E1E",
-            }}
-          >
+              padding: "5px 14px",
+              textDecoration: "none",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+            }}>
             resume
           </a>
         )}
