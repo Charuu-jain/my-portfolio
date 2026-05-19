@@ -36,7 +36,7 @@ export default function About() {
           <div style={{width:"100%",aspectRatio:"1",backgroundColor:"#EDE8DC",display:"flex",alignItems:"center",justifyContent:"center",overflow:"hidden"}}>
             <img src="/charu.jpeg" alt="Charu Jain" style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center 20%",filter:"sepia(0.8) contrast(1.1) brightness(0.95)"}} />
           </div>
-          <p style={{fontFamily:"monospace",fontSize:"13px",color:"#2C1810",textAlign:"center",marginTop:"12px",letterSpacing:"0.1em"}}>charu jain, 2025 ✦</p>
+          <p style={{fontFamily:"monospace",fontSize:"13px",color:"#2C1810",textAlign:"center",marginTop:"12px",letterSpacing:"0.1em"}}>charu jain, 2005 ✦</p>
         </motion.div>
 
         <motion.div
