@@ -11,9 +11,9 @@ export default function Contact() {
 
   function handleSubmit() {
     if (!form.name || !form.email || !form.message) return
-    const subject = encodeURIComponent(`Hey Charu! — from ${form.name}`)
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`)
-    window.open(`mailto:charujain290605@gmail.com?subject=${subject}&body=${body}`)
+    const subject = encodeURIComponent("Hey Charu! — from " + form.name)
+    const body = encodeURIComponent("Name: " + form.name + "\nEmail: " + form.email + "\n\nMessage:\n" + form.message)
+    window.open("mailto:charujain290605@gmail.com?subject=" + subject + "&body=" + body)
     setSent(true)
     setTimeout(() => setSent(false), 3000)
   }
@@ -45,7 +45,7 @@ export default function Contact() {
 
       <div style={{ position:"absolute", top:0, left:0, right:0, height:"36px", backgroundColor:"#6B1E1E", display:"flex", alignItems:"center", overflow:"hidden" }}>
         <div className="animate-marquee" style={{ display:"flex", gap:"12px", whiteSpace:"nowrap" }}>
-          {Array(20).fill("✦ LET'S TALK ✦ GET IN TOUCH ✦ HIRE ME ✦").map((t, i) => (
+          {Array(20).fill("LET'S TALK  GET IN TOUCH  HIRE ME").map((t, i) => (
             <span key={i} style={{ color:"#EDE8DC", fontSize:"11px", fontFamily:"monospace", letterSpacing:"0.2em" }}>{t}</span>
           ))}
         </div>
@@ -65,7 +65,7 @@ export default function Contact() {
           viewport={{ once:true }}
           style={{ color:"#6B1E1E", fontFamily:"monospace", fontSize:"12px", letterSpacing:"0.3em", textTransform:"uppercase", marginBottom:"1rem" }}
         >
-          ▶ level 03
+          level 03
         </motion.p>
 
         <motion.h2
@@ -99,10 +99,10 @@ export default function Contact() {
               style={{ fontFamily:"monospace", fontSize:"15px", color:"#D4C5A9", lineHeight:1.8, marginBottom:"2rem" }}
             >
               open to internships, collabs, or just a good conversation.
-              drop a message and i'll get back to you. 🍜
+              drop a message and i'll get back to you.
             </motion.p>
 
-            <div style={{ display:"flex", flexDirection:"column", gap:"1px" }}>
+            <div style={{ display:"flex", flexDirection:"column", gap:"1px", marginBottom:"2rem" }}>
               {[
                 { label: "email", value: "charujain290605@gmail.com", href: "mailto:charujain290605@gmail.com" },
                 { label: "github", value: "github.com/Charuu-jain", href: "https://github.com/Charuu-jain" },
@@ -126,8 +126,8 @@ export default function Contact() {
                     textDecoration: "none",
                     transition: "background 0.2s",
                   }}
-                  onMouseEnter={e => e.currentTarget.style.backgroundColor = "rgba(107,30,30,0.15)"}
-                  onMouseLeave={e => e.currentTarget.style.backgroundColor = "transparent"}
+                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = "rgba(107,30,30,0.15)" }}
+                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent" }}
                 >
                   <div style={{ display:"flex", alignItems:"center", gap:"1rem" }}>
                     <span style={{ fontFamily:"monospace", fontSize:"10px", color:"#6B1E1E", letterSpacing:"0.25em", textTransform:"uppercase", minWidth:"60px" }}>{item.label}</span>
@@ -138,6 +138,24 @@ export default function Contact() {
               ))}
               <div style={{ borderTop:"1px solid rgba(107,30,30,0.3)" }} />
             </div>
+
+            
+              href="/resume.pdf"
+              download="Charu_Jain_Resume.pdf"
+              style={{
+                display: "inline-block",
+                fontFamily: "monospace",
+                fontSize: "12px",
+                color: "#EDE8DC",
+                backgroundColor: "#6B1E1E",
+                padding: "12px 28px",
+                textDecoration: "none",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+              }}
+            >
+              download resume
+            </a>
           </div>
 
           <motion.div
@@ -185,7 +203,7 @@ export default function Contact() {
                 alignSelf: "flex-start",
               }}
             >
-              {sent ? "message sent ✦" : "send message"}
+              {sent ? "message sent" : "send message"}
             </button>
           </motion.div>
 
@@ -196,9 +214,9 @@ export default function Contact() {
           whileInView={{ opacity:1 }}
           transition={{ delay:0.6 }}
           viewport={{ once:true }}
-          style={{ fontFamily:"monospace", fontSize:"11px", color:"#6B1E1E", letterSpacing:"0.2em", marginTop:"4rem", opacity:0.5 }}
+          style={{ fontFamily:"monospace", fontSize:"11px", color:"rgba(107,30,30,0.5)", letterSpacing:"0.2em", marginTop:"4rem" }}
         >
-          © 2025 charu jain — built with react + vite + too much espresso ✦
+          2025 charu jain — built with react + vite + too much espresso
         </motion.p>
 
       </div>

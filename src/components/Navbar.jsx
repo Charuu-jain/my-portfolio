@@ -87,11 +87,8 @@ export default function Navbar() {
             textTransform: "uppercase",
             transition: "all 0.4s",
             pointerEvents: scrolled ? "auto" : "none",
-            border: "1px solid transparent",
           }}
-          onMouseEnter={e => { if (scrolled) { e.target.style.backgroundColor = "transparent"; e.target.style.color = "#6B1E1E"; e.target.style.border = "1px solid #6B1E1E" }}}
-          onMouseLeave={e => { if (scrolled) { e.target.style.backgroundColor = "#6B1E1E"; e.target.style.color = "#EDE8DC"; e.target.style.border = "1px solid transparent" }}}
-        >
+        
           resume
         </a>
       </div>
