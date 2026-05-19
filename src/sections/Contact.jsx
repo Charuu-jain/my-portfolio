@@ -153,10 +153,7 @@ export default function Contact() {
                 textDecoration: "none",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-              }}
-            >
-              download resume
-            </a>
+              }}>download resume</a>
           </div>
 
           <motion.div
