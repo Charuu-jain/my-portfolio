@@ -61,9 +61,9 @@ export default function About() {
 
           <div style={{display:"flex",flexDirection:"column",gap:"12px",marginBottom:"2rem"}}>
             {[
-              "3rd year cs student at lnct bhopal (2023-2027)",
+              "big dreams, bigger bugs, somehow still going",
   "dsa is painful. coffee helps. barely.",
-  "i debug, i break things, i build them back better",
+  "i build things. some work. all of them taught me something",
   "if it has a semicolon, i probably lost sleep over it"
             ].map((fact,i)=>(
               <motion.div key={i} initial={{opacity:0,x:20}} whileInView={{opacity:1,x:0}} transition={{delay:i*0.1+0.4}} viewport={{once:true}} style={{fontFamily:"monospace",fontSize:"13px",color:"#EDE8DC",padding:"8px 16px",borderLeft:"2px solid #6B1E1E",backgroundColor:"#2C1810",display:"flex",alignItems:"center",gap:"10px"}}>
