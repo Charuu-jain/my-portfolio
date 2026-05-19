@@ -55,15 +55,16 @@ export default function About() {
           </h2>
 
           <p style={{fontFamily:"monospace",fontSize:"15px",color:"#D4C5A9",lineHeight:1.8,marginBottom:"2rem",maxWidth:"480px"}}>
-            cs student at lnct bhopal, obsessed with building things that look as good as they work. currently being raised by karan aujla, taylor swift and sabrina carpenter. fuelled entirely by noodles.
+            currently: deep in dsa, building random stuff,
+            and drinking too much coffee
           </p>
 
           <div style={{display:"flex",flexDirection:"column",gap:"12px",marginBottom:"2rem"}}>
             {[
-              "noodles > everything, no debate",
-              "karan aujla + taylor + sabrina on repeat",
-              "barbie is not just a movie, it is a lifestyle",
-              "dsa grinder by day, fiction reader by night"
+              "3rd year cs student at lnct bhopal (2023-2027)",
+  "dsa is painful. coffee helps. barely.",
+  "i debug, i break things, i build them back better",
+  "if it has a semicolon, i probably lost sleep over it"
             ].map((fact,i)=>(
               <motion.div key={i} initial={{opacity:0,x:20}} whileInView={{opacity:1,x:0}} transition={{delay:i*0.1+0.4}} viewport={{once:true}} style={{fontFamily:"monospace",fontSize:"13px",color:"#EDE8DC",padding:"8px 16px",borderLeft:"2px solid #6B1E1E",backgroundColor:"#2C1810",display:"flex",alignItems:"center",gap:"10px"}}>
                 <span className="pulse-dot" />
