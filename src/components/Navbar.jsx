@@ -30,17 +30,28 @@ export default function Navbar() {
         top: 0, left: 0, right: 0,
         zIndex: 100,
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
-        padding: "0 1rem",
+        padding: "0 2rem",
         height: "52px",
-        backgroundColor: scrolled ? "rgba(237,232,220,0.5)" : "transparent",
+        backgroundColor: scrolled ? "rgba(237,232,220,0.85)" : "transparent",
         backdropFilter: scrolled ? "blur(6px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(107,30,30,0.15)" : "none",
         transition: "all 0.4s ease",
       }}
     >
-      <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap", justifyContent: "center" }}>
+      <span style={{
+        fontFamily: "monospace",
+        fontSize: "12px",
+        color: scrolled ? "#6B1E1E" : "transparent",
+        letterSpacing: "0.2em",
+        fontWeight: "bold",
+        transition: "color 0.4s",
+      }}>
+        cj.
+      </span>
+
+      <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
         {links.map((link, i) => (
           <span
             key={i}
@@ -61,6 +72,28 @@ export default function Navbar() {
             {link}
           </span>
         ))}
+
+        
+          href="/resume.pdf"
+          download="Charu_Jain_Resume.pdf"
+          style={{
+            fontFamily: "monospace",
+            fontSize: "11px",
+            color: scrolled ? "#EDE8DC" : "transparent",
+            backgroundColor: scrolled ? "#6B1E1E" : "transparent",
+            padding: "5px 14px",
+            textDecoration: "none",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            transition: "all 0.4s",
+            pointerEvents: scrolled ? "auto" : "none",
+            border: "1px solid transparent",
+          }}
+          onMouseEnter={e => { if (scrolled) { e.target.style.backgroundColor = "transparent"; e.target.style.color = "#6B1E1E"; e.target.style.border = "1px solid #6B1E1E" }}}
+          onMouseLeave={e => { if (scrolled) { e.target.style.backgroundColor = "#6B1E1E"; e.target.style.color = "#EDE8DC"; e.target.style.border = "1px solid transparent" }}}
+        >
+          resume
+        </a>
       </div>
     </motion.nav>
   )

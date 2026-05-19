@@ -24,7 +24,6 @@ function MusicPlayer() {
 
   return (
     <motion.div
-      className="music-player"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.2 }}
@@ -103,18 +102,9 @@ export default function Hero() {
         backgroundSize: "40px 40px",
       }} />
 
-      <div style={{ position:"absolute", top:0, left:0, right:0, height:"44px", backgroundColor:"#2C1810", display:"flex", alignItems:"center", overflow:"hidden", zIndex:10 }}>
-        <div className="animate-marquee" style={{ display:"flex", gap:"16px", whiteSpace:"nowrap" }}>
-          {Array(20).fill("◼ CHARU JAIN ◼ PORTFOLIO ◼ 2025 ◼").map((t, i) => (
-            <span key={i} style={{ color:"#EDE8DC", fontSize:"11px", fontFamily:"monospace", letterSpacing:"0.25em" }}>{t}</span>
-          ))}
-        </div>
-      </div>
-
       {STICKERS.map((s, i) => (
         <motion.img
           key={i}
-          className="sticker"
           src={s.src}
           alt=""
           initial={{ opacity: 0, scale: 0.4 }}
