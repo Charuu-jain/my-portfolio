@@ -140,7 +140,7 @@ export default function Contact() {
               <div style={{ borderTop:"1px solid rgba(107,30,30,0.3)" }} />
             </div>
 
-            
+            <a
               href="/resume.pdf"
               download="Charu_Jain_Resume.pdf"
               style={{
@@ -153,7 +153,9 @@ export default function Contact() {
                 textDecoration: "none",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-              }}>download resume</a>
+              }}>
+              download resume
+            </a>
           </div>
 
           <motion.div
