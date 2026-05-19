@@ -83,7 +83,7 @@ export default function Navbar() {
           </span>
         ))}
         {scrolled && (
-          
+          <a
             href="/resume.pdf"
             download="Charu_Jain_Resume.pdf"
             style={{
